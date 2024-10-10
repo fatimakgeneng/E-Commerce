@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { urlFor } from "@/lib/createclient";
 import { useShoppingCart } from "use-shopping-cart";
 import { SanityImageSource } from '@sanity/image-url/lib/types/types'; // Import SanityImageSource type
 
+// Define the interface for the product in the cart
 export interface ProductCart {
     name: string;
     description: string;
@@ -23,6 +24,7 @@ export default function AddToBag({
 }: ProductCart) {
     const { addItem, handleCartClick } = useShoppingCart();
 
+    // Create a product object
     const product = {
         name: name,
         description: description,
@@ -35,7 +37,8 @@ export default function AddToBag({
     return (
         <Button
             onClick={() => {
-                addItem(product), handleCartClick();
+                addItem(product); // Add item to cart
+                handleCartClick(); // Open the cart
             }}
         >
             Add To Cart
