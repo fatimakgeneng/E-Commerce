@@ -1,4 +1,5 @@
 import AddToBag from "@/app/components/addtocart";
+import Checkout from "@/app/components/checkout";
 import ImageGallery from "@/app/components/imagegallery";
 import { fullProduct } from "@/app/interface";
 import { Button } from "@/components/ui/button";
@@ -21,6 +22,8 @@ const data = await client.fetch(query);
 
 return data;
 }
+
+export const dynamic = "force-dynamic";  //for sanity
 
 export default async function ProductPage({params}:{params:{slug:string}}){ // Destructuring to remove error on getData
     const data:fullProduct = await getData(params.slug)
@@ -81,7 +84,15 @@ export default async function ProductPage({params}:{params:{slug:string}}){ // D
                     key={data._id}
                     price_id={data.price_id}
               />
-                        <Button variant={"secondary"}>Checkout</Button>
+                  <Checkout
+                  name={data.name}
+                  description={data.description}
+                  price={data.price}
+                  currency="USD"
+                  image={data.images[0]}
+                  key={data._id}
+                  price_id={data.price_id}
+              />
                     </div>
 
                     <p className="mt-12 text-base text-gray-500 tracking-wide">

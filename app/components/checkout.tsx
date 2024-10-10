@@ -1,7 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button";
 import { urlFor } from "@/lib/createclient";
-import { Currency } from "lucide-react";
+//import { Currency } from "lucide-react";
 import { useShoppingCart } from "use-shopping-cart";
 import { ProductCart } from "./addtocart";
 
@@ -29,8 +29,10 @@ export default function Checkout({
     price_id: price_id,
 
     }
-    return<Button onClick={()=>{
-        buyNow(product.price_id)
-    }}>Add To Cart</Button>
-    
-}
+    return(
+    <Button
+    variant="outline"
+    onClick={()=>{
+        buyNow(product.price_id)}}>
+        Checkout
+    </Button>)}

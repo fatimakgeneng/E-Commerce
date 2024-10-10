@@ -17,6 +17,8 @@ async function getData(category: string) {
   return data;
 }
 
+export const dynamic = "force-dynamic";  //for sanity
+
 export default async function categoryPage({
   params,
 }:{

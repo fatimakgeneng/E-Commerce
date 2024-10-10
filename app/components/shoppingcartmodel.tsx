@@ -16,7 +16,7 @@ export default function ShoppingCartModel(){
   const {cartCount, shouldDisplayCart, handleCartClick, cartDetails, removeItem, totalPrice, redirectToCheckout} = useShoppingCart()
 
 
-  async function handleCheckoutClick(event:any) {
+  async function handleCheckoutClick(event:/*any*/ React.MouseEvent<HTMLButtonElement>) {
     event.preventDefault()
     try{
       const result = await redirectToCheckout()
