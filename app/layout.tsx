@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 import CartProvider from "./components/provider";
 import ShoppingCartModel from "./components/shoppingcartmodel";
+import Footer from "./components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Navbar/>
         <ShoppingCartModel />
         {children}
+        <Footer />
         </CartProvider>
       </body>
     </html>
