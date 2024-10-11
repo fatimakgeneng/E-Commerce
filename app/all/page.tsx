@@ -62,7 +62,7 @@ export default async function AllProductsPage() {
                     {product.categoryName}
                   </p>
                 </div>
-                <p className="text-sm font-medium text-gray-900">
+                <p className="text-sm font-medium text-gray-900 justify-items-end">
                   ${product.price}
                 </p>
               </div>
