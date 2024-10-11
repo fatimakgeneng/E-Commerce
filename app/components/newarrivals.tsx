@@ -18,8 +18,10 @@ async function getData(){
 }`;
 
 const data = await client.fetch(query);
+//console.log("Fetched Data:", data); // Log the data to check its structure
 return data;
 }
+export const dynamic = "force-dynamic";  //for sanity
 
 export default async function Newest(){
     const data:simplifiedProduct[] = await getData();
