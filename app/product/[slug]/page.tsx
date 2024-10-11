@@ -23,7 +23,7 @@ const data = await client.fetch(query);
 return data;
 }
 
-export const dynamic = "force-dynamic";  //for sanity
+//export const dynamic = "force-dynamic";  //for sanity
 
 export default async function ProductPage({params}:{params:{slug:string}}){ // Destructuring to remove error on getData
     const data:fullProduct = await getData(params.slug)

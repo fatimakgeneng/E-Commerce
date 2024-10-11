@@ -13,11 +13,11 @@ async function getData(category: string) {
     "categoryName": category->name
   }`;
 
-  const data = await client.fetch(query, { category });
+  const data = await client.fetch(query, { category }, {cache:"no-store"});
   return data;
 }
 
-export const dynamic = "force-dynamic";  //for sanity
+//export const dynamic = "force-dynamic";  //for sanity
 
 export default async function categoryPage({
   params,
