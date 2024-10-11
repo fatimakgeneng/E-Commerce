@@ -1,4 +1,5 @@
 import AllProductsPage from "./all/page";
+import { AccordionDemo } from "./components/accordion";
 import Hero from "./components/hero";
 import Newest from "./components/newarrivals";
 
@@ -10,6 +11,7 @@ import Newest from "./components/newarrivals";
       <Hero />
       <Newest />
       <AllProductsPage />
+      <AccordionDemo />
     </div>
   );
 }
